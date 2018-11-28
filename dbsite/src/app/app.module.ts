@@ -11,6 +11,7 @@ import { ActorsComponent } from './actors/actors.component';
 import { RatingsComponent } from './ratings/ratings.component';
 import { DirectorsComponent } from './directors/directors.component';
 import { WritersComponent } from './writers/writers.component';
+import { NavigationComponent } from './navigation/navigation.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { WritersComponent } from './writers/writers.component';
     ActorsComponent,
     RatingsComponent,
     DirectorsComponent,
-    WritersComponent
+    WritersComponent,
+    NavigationComponent
   ],
   imports: [
     BrowserModule,
