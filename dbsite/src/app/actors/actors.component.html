@@ -1,25 +1,31 @@
 <!--Actors Section-->
-<div id="actors" class="scrollto clearfix">
-
-    <div class="row no-padding-bottom clearfix">
+<aside id="actors" class="row text-center scrollto clearfix" data-featherlight-gallery
+        data-featherlight-filter="a">
+        <h2>All Actors</h2>
+        <ul class="actors">
+           <li *ngFor="let actor of actors" (click)="onSelect(actor)">
+              <span class="badge">{{actor.Id}}</span> {{actor.Name}}
+           </li>
+        </ul>
+    <!-- <div class="row no-padding-bottom clearfix"> -->
 
 
         <!--Content Left Side-->
-        <div class="col-3">
+        <!-- <div class="col-3"> -->
             <!--User Testimonial-->
-            <blockquote class="testimonial text-right bigtest">
+            <!-- <blockquote class="testimonial text-right bigtest">
                 <q>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                     labore
                     et dolore magna aliqua</q>
                 <footer>— John Doe, Happy Customer</footer>
-            </blockquote>
+            </blockquote> -->
             <!-- End of Testimonial-->
 
-        </div>
+        <!-- </div> -->
         <!--End Content Left Side-->
 
         <!--Content of the Right Side-->
-        <div class="col-3">
+        <!-- <div class="col-3">
             <div class="section-heading">
                 <h3>BELIEVING</h3>
                 <h2 class="section-title">Focusing On What Matters Most</h2>
@@ -34,21 +40,21 @@
                 Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
                 consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
                 Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet!
-            </p>
+            </p> -->
             <!-- Just replace the Video ID "UYJ5IjBRlW8" with the ID of your video on YouTube (Found within the URL) -->
-            <a href="#" data-videoid="UYJ5IjBRlW8" data-videosite="youtube" class="button video link-lightbox">
+            <!-- <a href="#" data-videoid="UYJ5IjBRlW8" data-videosite="youtube" class="button video link-lightbox">
                 WATCH VIDEO <i class="fa fa-play" aria-hidden="true"></i>
             </a>
-        </div>
+        </div> -->
         <!--End Content Right Side-->
 
-        <div class="col-3">
+        <!-- <div class="col-3">
             <img src="../assets/images/dancer.jpg" alt="Dancer"/>
         </div>
 
-    </div>
+    </div> -->
 
 
-</div>
+</aside>
 <!--End of Actors Section-->
 

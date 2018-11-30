@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-writers',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WritersComponent implements OnInit {
 
-  constructor() { }
+writers;
+
+  constructor(private http : HttpClient) { }
 
   ngOnInit() {
+
+    this.http.get('http://localhost:3000/writers').subscribe(data => {
+
+      this.writers = data;
+      console.log(data);
+
+    });
   }
 
 }

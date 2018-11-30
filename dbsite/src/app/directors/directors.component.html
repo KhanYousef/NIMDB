@@ -1,14 +1,21 @@
 <!--Directors -->
-<section id="directors" class="secondary-color text-center scrollto clearfix ">
-    <div class="row clearfix">
+<aside id="directors" class="row text-center scrollto clearfix" data-featherlight-gallery
+        data-featherlight-filter="a">
+        <h2>All Directors</h2>
+        <ul class="director">
+           <li *ngFor="let director of directors" (click)="onSelect(director)">
+              <span class="badge">{{director.Id}}</span> {{director.Name}}
+           </li>
+        </ul>
+    <!-- <div class="row clearfix">
 
         <div class="section-heading">
             <h3>YOUR CHOICE</h3>
             <h2 class="section-title">We have the right package for you</h2>
-        </div>
+        </div> -->
 
         <!--Pricing Block-->
-        <div class="pricing-block col-3 wow fadeInUp" data-wow-delay="0.4s">
+        <!-- <div class="pricing-block col-3 wow fadeInUp" data-wow-delay="0.4s">
             <div class="pricing-block-content">
                 <h3>Personal</h3>
                 <p class="pricing-sub">The standard version</p>
@@ -25,11 +32,11 @@
                 </ul>
                 <a href="#" class="button">BUY TODAY</a>
             </div>
-        </div>
+        </div> -->
         <!--End Pricing Block-->
 
         <!--Pricing Block-->
-        <div class="pricing-block featured col-3 wow fadeInUp" data-wow-delay="0.6s">
+        <!-- <div class="pricing-block featured col-3 wow fadeInUp" data-wow-delay="0.6s">
             <div class="pricing-block-content">
                 <h3>Student</h3>
                 <p class="pricing-sub">Most popular choice</p>
@@ -46,11 +53,11 @@
                 </ul>
                 <a href="#" class="button">BUY TODAY</a>
             </div>
-        </div>
+        </div> -->
         <!--End Pricing Block-->
 
         <!--Pricing Block-->
-        <div class="pricing-block col-3 wow fadeInUp" data-wow-delay="0.8s">
+        <!-- <div class="pricing-block col-3 wow fadeInUp" data-wow-delay="0.8s">
             <div class="pricing-block-content">
                 <h3>Business</h3>
                 <p class="pricing-sub">For the whole team</p>
@@ -67,9 +74,9 @@
                 </ul>
                 <a href="#" class="button">BUY TODAY</a>
             </div>
-        </div>
+        </div> -->
         <!--End Pricing Block-->
 
-    </div>
-</section>
+    <!-- </div> -->
+    </aside>
 <!--End of Directors-->
