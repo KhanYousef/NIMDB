@@ -10,6 +10,25 @@
                   </li>
                </ul>
 
+               <h2>Filter by release date</h2>
+               <select name="Years" [(ngModel)]="yearSelected" (ngModelChange)="onYearChange(yearSelected)">
+                     <option value="1995">1995</option>
+                     <option value="2007">2007</option>
+                     <option value="2008">2008</option>
+                     <option value="2016">2016</option>
+                     <option value="2018">2018</option>
+               </select>
+               &nbsp;
+               &nbsp;
+
+               <ul class="moviesbyyear">
+                     <li *ngFor="let moviebyyear of moviesbyyears">
+                        <span class="badge">{{moviebyyear.Id}}</span> {{moviebyyear.Name}} {{moviebyyear.ReleaseDate}}
+                     </li>
+                  </ul>
+
+               <!-- <button onclick="yearButton()">Filter</button> -->
+
                 <!-- <a href="../assets/images/gallery-images/gallery-image-1.jpg" data-featherlight="image" class="col-3 wow fadeIn"
                    data-wow-delay="0.1s"><img src="../assets/images/gallery-images/gallery-image-1.jpg" alt="Landing Page"/></a>
                 <a href="../assets/images/gallery-images/gallery-image-2.jpg" data-featherlight="image" class="col-3 wow fadeIn"

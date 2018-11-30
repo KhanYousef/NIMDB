@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-ratings',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RatingsComponent implements OnInit {
 
-  constructor() { }
+  ratings;
+
+  constructor(private http : HttpClient) { }
 
   ngOnInit() {
+
+    this.http.get('http://localhost:3000/ratings').subscribe(data => {
+
+      this.ratings = data;
+      console.log(data);
+
+    });
   }
 
 }

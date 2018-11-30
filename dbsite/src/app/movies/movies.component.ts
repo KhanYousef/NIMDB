@@ -12,6 +12,7 @@ import { HttpClient } from '@angular/common/http';
 export class MoviesComponent implements OnInit {
 
   movies;
+  moviesbyyears;
 
   // constructor() { }
   constructor(private http : HttpClient) { }
@@ -24,8 +25,18 @@ export class MoviesComponent implements OnInit {
       console.log(data);
 
     });
+  }
+
+  onYearChange(yearSelected){
+
+    this.http.get('http://localhost:3000/movies/' + yearSelected).subscribe(data => {
 
 
+      this.moviesbyyears = data;
+      console.log(data);
+
+    });
+    
   }
 
 }
