@@ -3,13 +3,33 @@
         <aside id="movies" class="row text-center scrollto clearfix" data-featherlight-gallery
                  data-featherlight-filter="a">
 
-               <h2>All Movies</h2>
-               <ul class="movies">
-                  <li *ngFor="let movie of movies" (click)="onSelect(movie)">
-                     <span class="badge">{{movie.Id}}</span> {{movie.Name}}
-                  </li>
-               </ul>
 
+            <h2>All Movies</h2>
+            <div style="height: 300px">
+               <div class="col" style = "text-align:left">     
+                  <ul class="movies">
+                     <li *ngFor="let movie of movies" (click)="onSelect(movie)">
+                        <span class="badge">{{movie.Id}}</span> {{movie.Name}}
+                     </li>
+                  </ul>
+               </div>
+
+               <div class="col">
+                  <ul class="movieselected" *ngIf="moviesinfo">
+                     <h4> {{moviesinfo.Name}} </h4>
+                     <li class="badge">Duration: {{moviesinfo.Duration}}</li>
+                     <li class="badge">Release Date: {{moviesinfo.ReleaseDate}}</li>
+                     <li class="badge">Awards: {{moviesinfo.Awards}}</li>
+                     <li class="badge">User Rating: {{moviesinfo.UserRating}}</li>
+                     <li class="badge">Rating: {{moviesinfo.Rating}}</li>
+                     <li class="badge">Genre: {{moviesinfo.Genre}}</li>
+                     <li class="badge">Revenue: {{moviesinfo.Revenue}}</li>
+                  </ul>
+               </div>
+
+            </div>
+            
+            <div>
                <h2>Filter by release date</h2>
                <select name="Years" [(ngModel)]="yearSelected" (ngModelChange)="onYearChange(yearSelected)">
                      <option value="1995">1995</option>
@@ -21,11 +41,15 @@
                &nbsp;
                &nbsp;
 
-               <ul class="moviesbyyear">
+               <ul style="text-align:left" class="moviesbyyear">
                      <li *ngFor="let moviebyyear of moviesbyyears">
                         <span class="badge">{{moviebyyear.Id}}</span> {{moviebyyear.Name}} {{moviebyyear.ReleaseDate}}
                      </li>
                   </ul>
+            </div>
+
+
+               
 
                <!-- <button onclick="yearButton()">Filter</button> -->
 

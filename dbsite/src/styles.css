@@ -354,7 +354,7 @@ section {
 }
 
 #logo img {
-    max-height: 22px;
+    max-height: 40px;
     vertical-align: middle;
     margin-right: 15px;
 }
@@ -2455,7 +2455,7 @@ a:hover, #header.nav-solid nav a:hover {
 /* Banner Background and Text Colors */
 
 #banner {
-    background: url("assets/images/banner-images/banner-image-1.jpg") no-repeat center top;
+    background: url("assets/images/banner-images/banner-image-xx.jpg") no-repeat center top;
     background-size:cover;
 }
 

@@ -9,6 +9,7 @@ import { HttpClient } from '@angular/common/http';
 export class DirectorsComponent implements OnInit {
 
 directors;
+somedirector;
 
   constructor(private http : HttpClient) { }
 
@@ -18,6 +19,15 @@ directors;
 
       this.directors = data;
       console.log(data);
+
+    });
+  }
+
+  onSelect(director){
+    this.http.get('http://localhost:3000/directors/' + director.Id).subscribe(data => {
+
+      this.somedirector = data[0];
+      console.log(data[0]);
 
     });
   }

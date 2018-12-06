@@ -9,6 +9,7 @@ import { HttpClient } from '@angular/common/http';
 export class ActorsComponent implements OnInit {
 
   actors;
+  someactor;
 
   constructor(private http : HttpClient) { }
 
@@ -18,6 +19,16 @@ export class ActorsComponent implements OnInit {
 
       this.actors = data;
       console.log(data);
+
+    });
+  }
+
+
+  onSelect(actor){
+    this.http.get('http://localhost:3000/actors/' + actor.Id).subscribe(data => {
+
+      this.someactor = data[0];
+      console.log(data[0]);
 
     });
   }

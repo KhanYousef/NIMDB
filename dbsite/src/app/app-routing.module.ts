@@ -11,7 +11,7 @@ import { WritersComponent } from './writers/writers.component';
 const routes: Routes = [
   { path: '', redirectTo: '/Home', pathMatch: 'full' },
   { path: 'Home', component: HeaderComponent },
-  { path: 'About', component: IntroComponent },
+  { path: 'Reviews', component: IntroComponent },
   { path: 'Movies', component: MoviesComponent },
   { path: 'Actors', component: ActorsComponent },
   { path: 'Ratings', component: RatingsComponent },

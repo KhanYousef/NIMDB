@@ -2,11 +2,23 @@
 <aside id="writers" class="row text-center scrollto clearfix" data-featherlight-gallery
         data-featherlight-filter="a">
         <h2>All Writers</h2>
-        <ul class="writers">
-           <li *ngFor="let writer of writers" (click)="onSelect(writer)">
-              <span class="badge">{{writer.Id}}</span> {{writer.Name}}
-           </li>
-        </ul>
+        <div>
+            <div class="col" style = "text-align:left">
+                <ul class="writers">
+                <li *ngFor="let writer of writers" (click)="onSelect(writer)">
+                    <span class="badge">{{writer.Id}}</span> {{writer.Name}}
+                </li>
+                </ul>
+            </div>
+
+            <div class="col">
+                <ul class="writerselected" *ngIf="somewriter">
+                        <h4>{{somewriter.Name}}</h4>
+                        <li class="badge">Age: {{somewriter.Age}}</li>
+                        <li class="badge">Awards: {{somewriter.Awards}}</li>
+                    </ul>
+            </div>
+        </div>
 
 
     <!-- <div class="row clearfix">

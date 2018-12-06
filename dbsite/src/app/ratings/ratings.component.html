@@ -6,11 +6,13 @@
         <br/>
         <br/>
         <h2> Top Ratings</h2>
-        <ul class="ratings">
-           <li *ngFor="let rating of ratings" (click)="onSelect(rating)">
-              <span class="badge">{{rating.userRating}}</span> {{rating.Name}}
-           </li>
-        </ul>
+        <div style="text-align:left">
+            <ul class="ratings">
+            <li *ngFor="let rating of ratings" (click)="onSelect(rating)">
+                <span class="badge">{{rating.userRating}}</span> {{rating.Name}}
+            </li>
+            </ul>
+        </div>
 
 
     <!-- <div class="row clearfix">
